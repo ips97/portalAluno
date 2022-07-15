@@ -1,0 +1,38 @@
+{{#each erros}}
+    <p class="alert alert-danger">{{texto}}</p>
+{{else}}
+
+{{/each}}
+
+
+
+<h2>Cadastro de Usuário:</h2>
+<section class="card">
+    <form action="/admin/cadastro/novo" class="card-body" method="post">
+        <label for="nome" class="form-label">Nome:</label>
+            <input type="text" style="text-transform: capitalize;" name="nome" placeholder="Insira o Nome" required class="form-control">
+        <label for="email" class="form-label">E-mail</label>    
+            <input type="email" name="email" placeholder="Insira o e-mail" required class="form-control">
+        <label for="senha">Senha:</label>
+            <input type="password" name="senha" required placeholder="Insira a Senha" class="form-control">
+        <label for="senha">Confirme a senha:</label>
+            <input type="password" name="senha2" required placeholder="Confirme a Senha" class="form-control">
+        <label for="instrumento">Instrumento:</label>
+            <select name="instrumento" class="form-select">
+                 {{#each instrumentos}}
+                <option value="{{_id}}">{{name}}</option>
+                {{else}}
+                <option value="0">Nenhum instrumento registrado</option>
+                {{/each}}
+
+            </select>
+        <label for="tipo">Tipo de Usuário:</label>
+            <select name="tipo" class="form-select">
+                <option value="Aluno">Aluno</option>
+                <option value="Administrador">Administrador</option>
+            </select>
+            <br>
+    <button type="submit" class="btn btn-success">Realizar Cadastro</button>
+
+    </form>
+</section>

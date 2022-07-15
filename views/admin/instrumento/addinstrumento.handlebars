@@ -1,0 +1,19 @@
+{{#each erros}}
+    <p class="alert alert-danger">{{texto}}</p>
+{{else}}
+
+{{/each}}
+
+
+
+<h3>Novo Instrumento:</h3>
+<section class="card">
+    
+    <form action="/admin/instrumento/novo" method="POST" class="card-body">
+        <label for="nome">Nome:</label>
+            <input type="text" style="text-transform: capitalize;" name="nome" id="nome" placeholder="Nome do Instrumento" required class="form-control">
+            <br>
+        <button type="submit" class="btn btn-success">Criar Instrumento</button>
+    </form>
+    
+</section></h2>

@@ -1,0 +1,88 @@
+.container-adm-grid{
+    display: grid;
+    grid-template: auto auto / auto auto;  
+    margin: auto;
+    justify-content: center;
+}
+.adm{    
+    border: 1px solid rgb(218, 218, 218);
+    border-radius: 12px;
+    margin: 5px;
+    padding: 10px;
+    
+    font-size: 18px;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    margin-right: 10px;
+}
+
+.menu{
+    border: 1px transparent rgba(91, 107, 94, 0.664);
+    border-radius: 8px;
+}
+.menu:hover{
+    background-color: rgb(48, 77, 61); 
+    
+}
+#traco{
+    background-color: rgba(111, 139, 120, 0.767);
+    padding: 20px 1px;
+    border-radius: 2px;
+}
+
+.edit{
+    width: 23px;
+    margin: 5px;
+}
+.container-instrumento-grid, .container-categoria{
+    width: 30%;
+    height: 15%;
+    display: flex;
+    justify-content: center;
+    margin: auto; 
+}
+
+.instrumento, .categoria{
+    border: 1px solid rgb(218, 218, 218);
+    border-radius: 12px;
+    padding: 10px;
+    text-align: center;
+    margin: auto;
+    margin-right: 10px;
+    display: inline-block;
+    color: black;
+    text-decoration: none;
+    
+}
+
+
+.btns{
+    border: 0.5px solid rgba(218, 218, 218, 0.418);
+    border-radius: 12px;
+    padding: 10px;    
+}
+
+.categoria, .adm{
+    color: black;
+    padding: 30px;    
+}
+
+.instrumento:hover,.adm:hover, .categoria:hover, .btns:hover{
+    box-shadow: 0 4px 8px 0 rgba(72, 49, 78, 0.192), 0 6px 20px 0 rgba(54, 39, 58, 0.26);
+    color: black;
+}
+
+@media screen and (max-width: 450px) { 
+
+    .container-instrumento-grid, .container-adm-grid .container-categoria{
+        width: 100%;
+        display: flexbox;
+        flex-flow: row wrap;        
+    }
+
+    .instrumento, .adm, .categoria{
+        margin: 10px;
+    }
+    
+}

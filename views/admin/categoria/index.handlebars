@@ -1,0 +1,21 @@
+<h2>Categorias:</h2>
+<hr>
+
+<a href="/admin/categoria/add"><button class="btn btn-success">Nova Categoria</button><br></a>
+
+<br>
+<br>
+<section class="container-categoria">
+     <br>
+     {{#each categoria}}
+        <a style="text-decoration: none;" href="/admin/{{_id}}">
+            <article class="categoria">
+            <h4>{{nome}}</h4>
+                
+            </article>
+        </a>
+    {{else}}
+    <h4 class="mt-3">Nenhuma Categoria Encontrada</h4>
+    {{/each}}
+    
+</section>

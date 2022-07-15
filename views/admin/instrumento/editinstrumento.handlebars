@@ -1,0 +1,19 @@
+{{#each erros}}
+    <p class="alert alert-danger">{{texto}}</p>
+{{else}}
+
+{{/each}}
+
+
+<h3>Editar Instrumento:</h3>
+<section class="card">
+    <section class="card-body">
+    <form action="/admin/instrumento/edit" method="POST">
+        <input type="hidden" name="id" value="{{instrumento._id}}">
+        <label for="nome">Nome:</label>
+            <input type="text" name="nome" style="text-transform: capitalize;" id="nome" placeholder="Nome do Instrumento" class="form-control" value="{{instrumento.name}}">
+            <br>
+        <button type="submit" class="btn btn-success">Editar Instrumento</button>
+    </form>
+    </section>
+</section>

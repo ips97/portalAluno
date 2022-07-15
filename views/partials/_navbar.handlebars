@@ -1,0 +1,61 @@
+{{#if user.type}}
+<nav class="navbar navbar-expand-lg navbar-dark bg-success">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/admin/index">Portal do Aluno</a>
+    <div id="traco"></div>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        
+        
+        <li class="nav-item">
+          <a class="menu nav-link active" aria-current="page" href="/admin/index">Home</a>
+        </li> 
+        <li class="nav-item">
+          <a class="menu nav-link active" aria-current="page" href="/admin/instrumento">Instrumentos</a>
+        </li>
+        <li class="nav-item">
+          <a class="menu nav-link active" aria-current="page" href="/admin/usuario/cadastro">Usuários</a>
+        </li>
+        <li class="nav-item">
+          <a class="menu nav-link active" aria-current="page" href="/admin/aula/a/index">Aulas (em andamento)</a>
+        </li> 
+        <li class="nav-item">
+          <a class="menu nav-link active" aria-current="page" href="/admin/categoria">Categorias</a>
+        </li>
+        <li class="nav-item">
+          <a class="menu nav-link " href="/usuario/logout">Sair</a>
+        </li>
+        
+     </div>
+      
+  </div>
+</nav>
+{{else}}
+<nav class="navbar navbar-expand-lg navbar-dark bg-success">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/usuario/">Portal do Aluno</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+      
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        
+        
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="/usuario/">Home</a>
+        </li><li class="nav-item">
+          <a  class="nav-link active" aria-current="page" href="">Aula</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="/usuario/logout">Sair</a>
+        </li>
+        
+     </div>
+      
+  </div>
+</nav>
+{{/if}}

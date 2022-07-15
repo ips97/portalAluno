@@ -1,0 +1,19 @@
+<h1>Aulas de {{aulas.[0].instrumento.name}} {{categoria.[0].nome}}</h1>
+<hr>
+
+<br>
+<br>
+
+
+<section class="card">
+    <article class="card-body">
+        {{#each aulas}}
+        <a href="/admin/categoria/a/{{_id}}">
+        <h4>Título: {{titulo}}</h4>
+        <h6>Categoria: {{../categoria.[0].nome}}</h6>
+        </a>
+        {{else}}
+        <h4 class="mt-3">Nenhuma Aula Encontrada</h4>
+        {{/each}}
+    </article>
+</section>

@@ -1,0 +1,19 @@
+<h2>Lista de Usuário</h2>
+<hr>
+
+<a href="/admin/usuario/cadastro/add"><button class="btn btn-success">Novo Usuário</button><br></a>
+
+<br><br>
+{{#each usuarios}}
+<br>
+    <section class="card">
+        <article class="card-body mt-1">
+            <p><strong>Usuário:</strong> {{nome}}</p>
+            <p><strong>E-mail:</strong>  {{email}}</p>
+            <p><strong>Tipo:</strong>    {{type}}</p>
+        </article>
+    </section>
+
+{{else}}
+<h4 class="mt-3">Nenhum usuário registrado</h4>
+{{/each}}

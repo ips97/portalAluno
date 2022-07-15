@@ -1,0 +1,12 @@
+<h1>Nível de Aulas:</h1>
+
+<a href="/admin/aula/a/add"><button class="btn btn-success">Nova Aula</button><br></a>
+
+
+{{#each categoria}}
+<br>
+    <a href="/admin/aula/a/{{_id}}"><h5>{{nome}}</h5></a>
+
+{{else}}
+<h4 class="mt-3">Nenhuma aula registrada</h4>
+{{/each}}

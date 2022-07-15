@@ -1,0 +1,43 @@
+{{#each erros}}
+    <p class="alert alert-danger">{{texto}}</p>
+{{else}}
+
+{{/each}}
+
+
+
+<h1>Cadastro de Aula:</h1>
+<section class="card">
+    
+    <form class="card-body" action="/admin/aula/a/add" method="post">
+        <label for="titulo" class="form-label">Título: </label>
+            <input type="text" name="titulo" placeholder="Insira um título" class="form-control" required>
+
+        <label for="categoria" class="form-label">Categoria: </label>
+            <select name="categoria" style="text-transform: capitalize;" class="form-select">
+                 {{#each categoria}}
+                <option value="{{_id}}">{{nome}}</option>
+                {{else}}
+                <option value="0">Nenhuma categoria registrada</option>
+                {{/each}}
+            </select>
+
+        <label for="instrumento" class="form-label">Instrumento:</label>
+            <select name="instrumento" class="form-select">
+                 {{#each instrumentos}}
+                <option value="{{_id}}">{{name}}</option>
+                {{else}}
+                <option value="0">Nenhum instrumento registrado</option>
+                {{/each}}
+            </select>
+        <label for="link" class="form-label">Link da Aula: </label>
+            <input type="url" name="link" placeholder="Insira o URL da Aula" class="form-control">
+
+        <br>
+        <button type="submit" class="btn btn-success">Cadastrar Aula</button>
+    
+    </form>
+
+
+
+</section>

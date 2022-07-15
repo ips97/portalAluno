@@ -1,0 +1,20 @@
+<h2>Lista de Instrumento</h2>
+<hr>
+
+<a href="/admin/instrumento/add"><button class="btn btn-success">Novo Instrumento</button><br></a>
+
+<br><br>
+<section class="container-instrumento-grid">
+{{#each instrumentos}}
+<br>
+        <article class="instrumento">
+            <img src="/images/{{name}}.jpg" width="120px" alt="{{name}}">
+            <h4>{{name}}</h4>      
+            <br>      
+            <a href="/admin/instrumento/edit/{{_id}}" class="btns"><img class="edit" src="/images/ferramenta-lapis.png"  alt="Editar Instrumento"></a>        
+            <a href="/admin/instrumento/deletar/{{_id}}" class="btns"><img class="edit" src="/images/lixeira.png" alt="Excluir Instrumento"></a>
+        </article>
+{{else}}
+<h4 class="mt-3">Nenhum instrumento registrado</h4>
+{{/each}}
+</section>
